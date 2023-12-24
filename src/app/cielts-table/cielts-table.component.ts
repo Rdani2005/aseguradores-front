@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { environment } from '../../environments/environment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cielts-table',
@@ -21,7 +22,8 @@ export class CieltsTableComponent {
   constructor(
     private dataService: DataService,
     private http: HttpClient,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private router: Router
     ) { }
 
   ngOnInit() {
@@ -100,5 +102,9 @@ export class CieltsTableComponent {
       panelClass: [cssClass],
     }).afterDismissed().subscribe(() => window.location.reload());
 
+  }
+
+  onRowClick(uuid: string) {
+    this.router.navigate(['/clients', uuid]);
   }
 }

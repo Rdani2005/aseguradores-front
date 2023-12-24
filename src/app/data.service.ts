@@ -32,4 +32,14 @@ export class DataService {
     const url = `${this.carrierApiUrl}/${uuid}`;
     return this.http.delete(url, { responseType: 'text' });
   }
+
+  getInsuredDataByUUID(uuid: string): Observable<any> {
+    const url = `${this.insuredApiUrl}/${uuid}`; // Reemplaza 'tudata' con el endpoint correspondiente
+    return this.http.get(url);
+  }
+
+  deleteInsuredByUUID(uuid: string): Observable<any> {
+    const url = `${this.insuredApiUrl}/${uuid}`;
+    return this.http.delete(url, { responseType: 'text' });
+  }
 }
