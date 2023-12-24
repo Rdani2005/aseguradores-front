@@ -1,0 +1,27 @@
+/* detail-view.component.css */
+
+.card {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .delete-button {
+    margin-top: 20px;
+  }
+
+  success-snackbar {
+    background-color: #4caf50; /* Verde */
+  }
+  
+  .error-snackbar {
+    background-color: #f44336; /* Rojo */
+  }
+  
+  .info-snackbar {
+    background-color: #2196f3; /* Azul */
+  }
