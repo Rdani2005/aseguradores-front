@@ -6,6 +6,25 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Environment Variables
+
+edit the `src/environments/environment.ts` file to update the endpoints that we will be using.
+
+## Production variables
+
+create the file `src/environments/environment.prod.ts` to add the production endpoints that we will be using.
+
+Remember to change the production mode.
+
+```ts
+export const environment = {
+    production: true,
+    carrierApiUrl: 'your-api-url',
+    insuredApiUrl: `your-api-url`
+};
+
+```
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
